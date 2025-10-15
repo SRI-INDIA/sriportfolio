@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills - Sridevi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0d1117;
+            color: #c9d1d9;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(13, 17, 23, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #21262d;
+            z-index: 1000;
+            padding: 1.25rem 0;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #8b949e;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #58a6ff;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 6rem 2rem 4rem;
+        }
+
+        /* Page Header */
+        .page-header {
+            margin-bottom: 4rem;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.75rem;
+        }
+
+        .page-header p {
+            font-size: 1.15rem;
+            color: #8b949e;
+        }
+
+        /* Skills Grid */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .skill-card {
+            background: #161b22;
+            border: 1px solid #21262d;
+            border-radius: 8px;
+            padding: 2rem;
+            transition: all 0.2s;
+        }
+
+        .skill-card:hover {
+            border-color: #58a6ff;
+            transform: translateY(-4px);
+        }
+
+        .skill-card h3 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 0.75rem;
+        }
+
+        .skill-card p {
+            font-size: 1rem;
+            color: #8b949e;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .skill-tag {
+            padding: 0.35rem 0.75rem;
+            background: #0d1117;
+            border: 1px solid #21262d;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            color: #58a6ff;
+        }
+
+        /* Section Divider */
+        .section-divider {
+            margin: 5rem 0 3rem;
+        }
+
+        .section-divider h2 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-divider p {
+            font-size: 1.1rem;
+            color: #8b949e;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            color: #8b949e;
+            font-size: 0.9rem;
+            margin-top: 4rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1.5rem;
+                font-size: 0.85rem;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Sridevi</a>
+            <ul class="nav-links">
+                <li><a href="index.html">About Me</a></li>
+                <li><a href="experience.html">Professional Experience</a></li>
+                <li><a href="index.html#contact">Contact Me</a></li>
+                <li><a href="skills.html" class="active">Skills</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1>Skills & Expertise</h1>
+            <p>Technical expertise combined with creative execution</p>
+        </div>
+
+        <!-- Core Skills Section -->
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Digital Marketing Strategy</h3>
+                <p>
+                    Data-driven campaign development, performance optimization, and strategic planning 
+                    across multiple digital channels. Expertise in creating and executing comprehensive 
+                    marketing strategies that drive measurable business results.
+                </p>
+                <div class="skill-tags">
+                    <span class="skill-tag">SEO/SEM</span>
+                    <span class="skill-tag">Google Analytics</span>
+                    <span class="skill-tag">Campaign Management</span>
+                    <span class="skill-tag">A/B Testing</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>Content Creation & Storytelling</h3>
+                <p>
+                    Bilingual content development (Tamil/English) with expertise in video production, 
+                    scriptwriting, and visual storytelling. Creating engaging content that resonates 
+                    with diverse audiences and drives meaningful engagement.
+                </p>
+                <div class="skill-tags">
+                    <span class="skill-tag">Video Production</span>
+                    <span class="skill-tag">Copywriting</span>
+                    <span class="skill-tag">Visual Design</span>
+                    <span class="skill-tag">Bilingual Content</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>Community Building</h3>
+                <p>
+                    Proven track record of building and nurturing engaged online communities from scratch. 
+                    Strategic approach to fostering authentic connections, driving participation, and 
+                    creating lasting brand loyalty.
+                </p>
+                <div class="skill-tags">
+                    <span class="skill-tag">Social Media Growth</span>
+                    <span class="skill-tag">Engagement Strategy</span>
+                    <span class="skill-tag">Brand Development</span>
+                    <span class="skill-tag">Community Management</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>Educational Technology</h3>
+                <p>
+                    Expertise in EdTech content strategy, curriculum development, and creating digital 
+                    learning experiences. Understanding of pedagogical principles combined with 
+                    technological implementation for effective online education.
+                </p>
+                <div class="skill-tags">
+                    <span class="skill-tag">Curriculum Design</span>
+                    <span class="skill-tag">Learning Platforms</span>
+                    <span class="skill-tag">Educational Content</span>
+                    <span class="skill-tag">Child Development</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>Analytics & Data Insights</h3>
+                <p>
+                    Strong analytical mindset with proficiency in Google Analytics, performance tracking, 
+                    and data-driven decision making. Translating complex data into actionable insights 
+                    for campaign optimization and strategic planning.
+                </p>
+                <div class="skill-tags">
+                    <span class="skill-tag">Google Analytics</span>
+                    <span class="skill-tag">Performance Metrics</span>
+                    <span class="skill-tag">Conversion Optimization</span>
+                    <span class="skill-tag">Data Visualization</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>Cross-Cultural Communication</h3>
+                <p>
+                    Bilingual expertise (Tamil/English) with deep understanding of cultural nuances and 
+                    localization strategies. Creating culturally relevant content and marketing strategies 
+                    that authentically connect with regional and global audiences.
+                </p>
+                <div class="skill-tags">
+                    <span class="skill-tag">Tamil/English</span>
+                    <span class="skill-tag">Localization</span>
+                    <span class="skill-tag">Cultural Adaptation</span>
+                    <span class="skill-tag">Regional Marketing</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical Skills Section -->
+        <div class="section-divider">
+            <h2>Technical Proficiency</h2>
+            <p>Tools and platforms I work with regularly</p>
+        </div>
+
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h3>Marketing & Analytics Tools</h3>
+                <p>
+                    Proficient in industry-standard marketing and analytics platforms for campaign 
+                    management, performance tracking, and optimization.
+                </p>
+                <div class="skill-tags">
+                    <span class="skill-tag">Google Analytics</span>
+                    <span class="skill-tag">Google Ads</span>
+                    <span class="skill-tag">Meta Business Suite</span>
+                    <span class="skill-tag">Search Console</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>Content Creation Tools</h3>
+                <p>
+                    Skilled in video editing, graphic design, and content creation tools for 
+                    producing professional-quality digital content.
+                </p>
+                <div class="skill-tags">
+                    <span class="skill-tag">Adobe Premiere</span>
+                    <span class="skill-tag">Canva</span>
+                    <span class="skill-tag">Final Cut Pro</span>
+                    <span class="skill-tag">Photoshop</span>
+                </div>
+            </div>
+
+            <div class="skill-card">
+                <h3>Social Media Platforms</h3>
+                <p>
+                    Expert knowledge of major social media platforms, their algorithms, and 
+                    best practices for organic and paid growth.
+                </p>
+                <div class="skill-tags">
+                    <span class="skill-tag">YouTube</span>
+                    <span class="skill-tag">Instagram</span>
+                    <span class="skill-tag">LinkedIn</span>
+                    <span class="skill-tag">Twitter</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Sridevi. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Add scroll effect to nav
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 50) {
+                nav.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.3)';
+            } else {
+                nav.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

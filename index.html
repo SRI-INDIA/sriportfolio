@@ -6,7 +6,7 @@
     <title>Sridevi - Digital Marketing Strategist</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
             margin: 0;
@@ -14,21 +14,11 @@
             box-sizing: border-box;
         }
 
-        :root {
-            --bg-primary: #ffffff;
-            --bg-secondary: #f8f9fa;
-            --text-primary: #1a1a1a;
-            --text-secondary: #6b7280;
-            --accent: #2563eb;
-            --accent-hover: #1d4ed8;
-            --border: #e5e7eb;
-        }
-
         body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0d1117;
+            color: #c9d1d9;
             line-height: 1.6;
-            color: var(--text-primary);
-            background: var(--bg-primary);
             -webkit-font-smoothing: antialiased;
         }
 
@@ -37,15 +27,15 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(255, 255, 255, 0.95);
+            background: rgba(13, 17, 23, 0.95);
             backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border);
+            border-bottom: 1px solid #21262d;
             z-index: 1000;
-            padding: 1rem 0;
+            padding: 1.25rem 0;
         }
 
         .nav-container {
-            max-width: 1200px;
+            max-width: 1100px;
             margin: 0 auto;
             padding: 0 2rem;
             display: flex;
@@ -55,294 +45,143 @@
 
         .logo {
             font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--text-primary);
+            font-weight: 600;
+            color: #fff;
             text-decoration: none;
         }
 
         .nav-links {
             display: flex;
-            gap: 2rem;
+            gap: 2.5rem;
             list-style: none;
         }
 
         .nav-links a {
-            color: var(--text-secondary);
+            color: #8b949e;
             text-decoration: none;
             font-size: 0.95rem;
             font-weight: 500;
-            transition: color 0.3s ease;
+            transition: color 0.2s;
         }
 
-        .nav-links a:hover {
-            color: var(--accent);
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #58a6ff;
         }
 
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 6rem 2rem 4rem;
-            text-align: center;
-        }
-
-        .hero-content {
+        /* Container */
+        .container {
             max-width: 800px;
-        }
-
-        .hero h1 {
-            font-size: 4rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            letter-spacing: -0.02em;
-            animation: fadeInUp 0.8s ease;
-        }
-
-        .hero .subtitle {
-            font-size: 1.5rem;
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-            font-weight: 400;
-            animation: fadeInUp 0.8s ease 0.2s backwards;
-        }
-
-        .hero .description {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            margin-bottom: 2.5rem;
-            line-height: 1.8;
-            animation: fadeInUp 0.8s ease 0.4s backwards;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            animation: fadeInUp 0.8s ease 0.6s backwards;
-        }
-
-        .btn {
-            padding: 0.875rem 2rem;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn-primary {
-            background: var(--accent);
-            color: white;
-        }
-
-        .btn-primary:hover {
-            background: var(--accent-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 10px 25px rgba(37, 99, 235, 0.2);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--text-primary);
-            border: 2px solid var(--border);
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-            transform: translateY(-2px);
-        }
-
-        /* Section Styles */
-        section {
-            max-width: 1200px;
             margin: 0 auto;
-            padding: 5rem 2rem;
+            padding: 6rem 2rem 4rem;
         }
 
-        .section-header {
+        /* About Section */
+        .about-hero {
             text-align: center;
             margin-bottom: 4rem;
         }
 
-        .section-header h2 {
+        .profile-image {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid #58a6ff;
+            box-shadow: 0 0 0 4px rgba(88, 166, 255, 0.2);
+            margin-bottom: 2rem;
+        }
+
+        h1 {
             font-size: 2.5rem;
             font-weight: 700;
-            margin-bottom: 1rem;
-            letter-spacing: -0.02em;
-        }
-
-        .section-header p {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* Projects Grid */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 2rem;
-        }
-
-        .project-card {
-            background: var(--bg-secondary);
-            border-radius: 12px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            border: 1px solid var(--border);
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
-        }
-
-        .project-image {
-            width: 100%;
-            height: 240px;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 3rem;
-            color: white;
-        }
-
-        .project-card:nth-child(1) .project-image {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-
-        .project-card:nth-child(2) .project-image {
-            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-        }
-
-        .project-card:nth-child(3) .project-image {
-            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-        }
-
-        .project-content {
-            padding: 1.5rem;
-        }
-
-        .project-content h3 {
-            font-size: 1.5rem;
+            color: #fff;
             margin-bottom: 0.75rem;
-            font-weight: 600;
         }
 
-        .project-content p {
-            color: var(--text-secondary);
-            margin-bottom: 1rem;
-            line-height: 1.7;
-        }
-
-        .project-metrics {
-            display: flex;
-            gap: 1.5rem;
-            margin-top: 1rem;
-            padding-top: 1rem;
-            border-top: 1px solid var(--border);
-        }
-
-        .metric {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .metric-value {
+        .tagline {
             font-size: 1.25rem;
-            font-weight: 700;
-            color: var(--accent);
+            color: #8b949e;
+            margin-bottom: 2rem;
+            line-height: 1.6;
         }
 
-        .metric-label {
-            font-size: 0.875rem;
-            color: var(--text-secondary);
-        }
-
-        /* Skills Grid */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .skill-card {
-            padding: 2rem;
-            background: var(--bg-secondary);
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            transition: all 0.3s ease;
-        }
-
-        .skill-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-3px);
-        }
-
-        .skill-card h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
+        .resume-button {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            background: #58a6ff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 6px;
             font-weight: 600;
+            font-size: 1rem;
+            transition: all 0.2s;
         }
 
-        .skill-card p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
+        .resume-button:hover {
+            background: #79c0ff;
+            transform: translateY(-2px);
         }
 
-        /* About Section */
+        /* About Content */
         .about-content {
-            max-width: 800px;
-            margin: 0 auto;
+            margin: 4rem 0;
         }
 
-        .about-content p {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--text-secondary);
+        .about-content h2 {
+            font-size: 1.75rem;
+            font-weight: 600;
+            color: #fff;
             margin-bottom: 1.5rem;
         }
 
-        /* Contact Section */
-        .contact-content {
-            max-width: 600px;
-            margin: 0 auto;
+        .about-content p {
+            font-size: 1.05rem;
+            color: #8b949e;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Social Links */
+        .social-section {
+            margin-top: 6rem;
+            padding-top: 3rem;
+            border-top: 1px solid #21262d;
+        }
+
+        .social-section h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 1.5rem;
             text-align: center;
         }
 
-        .contact-links {
+        .social-links {
             display: flex;
             justify-content: center;
-            gap: 2rem;
+            gap: 1.5rem;
             flex-wrap: wrap;
-            margin-top: 2rem;
         }
 
-        .contact-link {
+        .social-link {
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            padding: 1rem 1.5rem;
-            background: var(--bg-secondary);
-            border-radius: 8px;
+            padding: 0.75rem 1.5rem;
+            background: #161b22;
+            border: 1px solid #21262d;
+            border-radius: 6px;
+            color: #8b949e;
             text-decoration: none;
-            color: var(--text-primary);
+            font-size: 0.95rem;
             font-weight: 500;
-            transition: all 0.3s ease;
-            border: 1px solid var(--border);
+            transition: all 0.2s;
         }
 
-        .contact-link:hover {
-            border-color: var(--accent);
-            color: var(--accent);
+        .social-link:hover {
+            border-color: #58a6ff;
+            color: #58a6ff;
             transform: translateY(-2px);
         }
 
@@ -350,63 +189,40 @@
         footer {
             text-align: center;
             padding: 3rem 2rem;
-            background: var(--bg-secondary);
-            color: var(--text-secondary);
-            border-top: 1px solid var(--border);
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            color: #8b949e;
+            font-size: 0.9rem;
+            margin-top: 4rem;
         }
 
         /* Responsive */
         @media (max-width: 768px) {
             .nav-links {
-                display: none;
+                gap: 1.5rem;
+                font-size: 0.85rem;
             }
 
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero .subtitle {
-                font-size: 1.2rem;
-            }
-
-            .hero .description {
-                font-size: 1rem;
-            }
-
-            .section-header h2 {
+            h1 {
                 font-size: 2rem;
             }
 
-            .projects-grid {
-                grid-template-columns: 1fr;
+            .tagline {
+                font-size: 1.1rem;
             }
 
-            .skills-grid {
-                grid-template-columns: 1fr;
+            .about-content h2 {
+                font-size: 1.5rem;
             }
 
-            .cta-buttons {
+            .social-links {
                 flex-direction: column;
+                align-items: stretch;
             }
 
-            .contact-links {
-                flex-direction: column;
+            .social-link {
+                justify-content: center;
             }
         }
 
-        /* Smooth Scroll */
         html {
             scroll-behavior: smooth;
         }
@@ -416,127 +232,31 @@
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
-            <a href="#" class="logo">Sridevi</a>
+            <a href="index.html" class="logo">Sridevi</a>
             <ul class="nav-links">
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="index.html" class="active">About Me</a></li>
+                <li><a href="experience.html">Professional Experience</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+                <li><a href="skills.html">Skills</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
+    <!-- Main Content -->
+    <div class="container">
+        <!-- About Hero Section -->
+        <section class="about-hero">
+            <img src="profile_circular.png" alt="Sridevi" class="profile-image">
             <h1>Sridevi</h1>
-            <p class="subtitle">Digital Marketing Strategist | Content Creator | EdTech Founder</p>
-            <p class="description">
-                I blend technical expertise with creative storytelling to build engaged communities 
-                and drive measurable results through data-driven digital marketing strategies.
+            <p class="tagline">
+                Digital Marketing Strategist | Content Creator | EdTech Founder
             </p>
-            <div class="cta-buttons">
-                <a href="#projects" class="btn btn-primary">View Projects</a>
-                <a href="#" class="btn btn-secondary">Download Resume</a>
-            </div>
-        </div>
-    </section>
+            <a href="Sridevi_Resume.pdf" class="resume-button" target="_blank">View Resume →</a>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <div class="section-header">
-            <h2>Featured Projects</h2>
-            <p>Showcasing impactful work across digital marketing, content creation, and community building</p>
-        </div>
-        <div class="projects-grid">
-            <div class="project-card">
-                <div class="project-image">🎓</div>
-                <div class="project-content">
-                    <h3>Tamiltoddlers</h3>
-                    <p>Founded and grew a Tamil language learning platform for children, creating educational content that bridges cultural gaps and preserves linguistic heritage.</p>
-                    <div class="project-metrics">
-                        <div class="metric">
-                            <span class="metric-value">5,000+</span>
-                            <span class="metric-label">Followers</span>
-                        </div>
-                        <div class="metric">
-                            <span class="metric-value">2</span>
-                            <span class="metric-label">Platforms</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image">🚀</div>
-                <div class="project-content">
-                    <h3>Google Digital Marketing</h3>
-                    <p>Developing and executing strategic digital marketing campaigns as a Digital Marketing Apprentice at Google, focusing on data-driven optimization and measurable outcomes.</p>
-                    <div class="project-metrics">
-                        <div class="metric">
-                            <span class="metric-value">Current</span>
-                            <span class="metric-label">Role</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-image">📱</div>
-                <div class="project-content">
-                    <h3>Content Strategy & Growth</h3>
-                    <p>Built engaged communities from scratch through strategic content planning, audience analysis, and platform-specific optimization across YouTube and Instagram.</p>
-                    <div class="project-metrics">
-                        <div class="metric">
-                            <span class="metric-value">Organic</span>
-                            <span class="metric-label">Growth</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills">
-        <div class="section-header">
-            <h2>Skills & Expertise</h2>
-            <p>A unique blend of technical knowledge and creative execution</p>
-        </div>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <h3>Digital Marketing Strategy</h3>
-                <p>Data-driven campaign development, SEO/SEM, analytics, and performance optimization</p>
-            </div>
-            <div class="skill-card">
-                <h3>Content Creation</h3>
-                <p>Bilingual content development, video production, storytelling, and audience engagement</p>
-            </div>
-            <div class="skill-card">
-                <h3>Community Building</h3>
-                <p>Social media growth, community management, and brand development across platforms</p>
-            </div>
-            <div class="skill-card">
-                <h3>Educational Technology</h3>
-                <p>EdTech content strategy, curriculum development, and digital learning experiences</p>
-            </div>
-            <div class="skill-card">
-                <h3>Analytics & Insights</h3>
-                <p>Google Analytics, performance tracking, A/B testing, and data-driven decision making</p>
-            </div>
-            <div class="skill-card">
-                <h3>Cross-Cultural Communication</h3>
-                <p>Tamil/English bilingual content, cultural adaptation, and localized marketing</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about">
-        <div class="section-header">
+        <!-- Detailed About Section -->
+        <section class="about-content">
             <h2>About Me</h2>
-        </div>
-        <div class="about-content">
             <p>
                 I'm a digital marketing professional with a unique blend of technical expertise and creative 
                 content development. Currently serving as a Digital Marketing Apprentice at Google, I bring 
@@ -546,7 +266,9 @@
             <p>
                 As the founder of Tamiltoddlers, I identified and filled a critical gap in regional language 
                 educational resources. I built an engaged community of 5,000+ followers across YouTube and 
-                Instagram, creating educational content focused on Tamil language learning for children.
+                Instagram, creating educational content focused on Tamil language learning for children. 
+                This experience demonstrates my expertise in content strategy, community building, and 
+                educational technology.
             </p>
             <p>
                 My career spans early childhood education, social media content creation, and digital 
@@ -554,40 +276,45 @@
                 and creative storytelling. I'm passionate about leveraging digital platforms to create 
                 meaningful connections and drive measurable results.
             </p>
-        </div>
-    </section>
+            <p>
+                With a data-driven approach to campaign development and a proven ability to build engaged 
+                audiences from scratch, I excel at translating complex concepts into accessible content 
+                that resonates across diverse audiences. My bilingual content creation skills (Tamil/English) 
+                and cross-cultural communication expertise allow me to craft strategies that connect 
+                authentically with regional and global audiences alike.
+            </p>
+        </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="section-header">
+        <!-- Contact / Social Section -->
+        <section class="social-section" id="contact">
             <h2>Let's Connect</h2>
-            <p>Interested in working together? Reach out through any of these channels</p>
-        </div>
-        <div class="contact-content">
-            <div class="contact-links">
-                <a href="mailto:your.email@example.com" class="contact-link">
-                    📧 Email
+            <div class="social-links">
+                <a href="mailto:sridevi@example.com" class="social-link">
+                    <span>📧</span> Email
                 </a>
-                <a href="https://linkedin.com/in/yourprofile" class="contact-link" target="_blank">
-                    💼 LinkedIn
+                <a href="https://linkedin.com/in/sridevi-profile" class="social-link" target="_blank">
+                    <span>💼</span> LinkedIn
                 </a>
-                <a href="https://instagram.com/tamiltoddlers" class="contact-link" target="_blank">
-                    📸 Instagram
+                <a href="https://instagram.com/tamiltoddlers" class="social-link" target="_blank">
+                    <span>📸</span> Instagram
                 </a>
-                <a href="https://youtube.com/@tamiltoddlers" class="contact-link" target="_blank">
-                    🎥 YouTube
+                <a href="https://youtube.com/@tamiltoddlers" class="social-link" target="_blank">
+                    <span>🎥</span> YouTube
+                </a>
+                <a href="https://twitter.com/yourhandle" class="social-link" target="_blank">
+                    <span>🐦</span> Twitter
                 </a>
             </div>
-        </div>
-    </section>
+        </section>
+    </div>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Sridevi. Built with passion for impactful digital experiences.</p>
+        <p>&copy; 2025 Sridevi. All rights reserved.</p>
     </footer>
 
     <script>
-        // Smooth scroll for navigation links
+        // Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -601,20 +328,14 @@
             });
         });
 
-        // Add scroll effect to navigation
-        let lastScroll = 0;
+        // Add scroll effect to nav
         const nav = document.querySelector('nav');
-
         window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-            
-            if (currentScroll <= 0) {
-                nav.style.boxShadow = 'none';
+            if (window.pageYOffset > 50) {
+                nav.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.3)';
             } else {
-                nav.style.boxShadow = '0 2px 10px rgba(0, 0, 0, 0.05)';
+                nav.style.boxShadow = 'none';
             }
-            
-            lastScroll = currentScroll;
         });
     </script>
 </body>

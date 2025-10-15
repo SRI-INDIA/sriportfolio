@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Experience - Sridevi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #0d1117;
+            color: #c9d1d9;
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(13, 17, 23, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid #21262d;
+            z-index: 1000;
+            padding: 1.25rem 0;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #8b949e;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #58a6ff;
+        }
+
+        /* Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 6rem 2rem 4rem;
+        }
+
+        /* Page Header */
+        .page-header {
+            margin-bottom: 4rem;
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 0.75rem;
+        }
+
+        .page-header p {
+            font-size: 1.15rem;
+            color: #8b949e;
+        }
+
+        /* Timeline */
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #21262d;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 3rem;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.4rem;
+            top: 0.25rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #58a6ff;
+            border: 2px solid #0d1117;
+        }
+
+        .timeline-item:hover::before {
+            width: 16px;
+            height: 16px;
+            left: -2.6rem;
+            top: 0.05rem;
+            box-shadow: 0 0 0 4px rgba(88, 166, 255, 0.2);
+        }
+
+        .timeline-date {
+            font-size: 0.9rem;
+            color: #58a6ff;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-company {
+            font-size: 1rem;
+            color: #8b949e;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-description {
+            font-size: 1rem;
+            color: #8b949e;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-description ul {
+            margin-left: 1.25rem;
+            margin-top: 0.75rem;
+        }
+
+        .timeline-description li {
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-tags {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            padding: 0.35rem 0.75rem;
+            background: #161b22;
+            border: 1px solid #21262d;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            color: #8b949e;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            color: #8b949e;
+            font-size: 0.9rem;
+            margin-top: 4rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1.5rem;
+                font-size: 0.85rem;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .timeline {
+                padding-left: 1.5rem;
+            }
+
+            .timeline-content h3 {
+                font-size: 1.25rem;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">Sridevi</a>
+            <ul class="nav-links">
+                <li><a href="index.html">About Me</a></li>
+                <li><a href="experience.html" class="active">Professional Experience</a></li>
+                <li><a href="index.html#contact">Contact Me</a></li>
+                <li><a href="skills.html">Skills</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1>Professional Experience</h1>
+            <p>My journey in digital marketing, content creation, and community building</p>
+        </div>
+
+        <!-- Timeline -->
+        <div class="timeline">
+            <!-- Experience Item 1 -->
+            <div class="timeline-item">
+                <div class="timeline-date">2024 - Present</div>
+                <div class="timeline-content">
+                    <h3>Digital Marketing Apprentice</h3>
+                    <div class="timeline-company">Google</div>
+                    <div class="timeline-description">
+                        <p>Developing and executing strategic digital marketing campaigns with focus on data-driven optimization and measurable outcomes.</p>
+                        <ul>
+                            <li>Execute data-driven marketing campaigns across multiple channels</li>
+                            <li>Analyze campaign performance using Google Analytics and marketing tools</li>
+                            <li>Collaborate with cross-functional teams to optimize marketing strategies</li>
+                            <li>Implement SEO/SEM best practices for improved visibility and engagement</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-tags">
+                        <span class="tag">Digital Marketing</span>
+                        <span class="tag">Google Analytics</span>
+                        <span class="tag">SEO/SEM</span>
+                        <span class="tag">Campaign Optimization</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience Item 2 -->
+            <div class="timeline-item">
+                <div class="timeline-date">2022 - Present</div>
+                <div class="timeline-content">
+                    <h3>Founder & Content Creator</h3>
+                    <div class="timeline-company">Tamiltoddlers</div>
+                    <div class="timeline-description">
+                        <p>Founded and grew Tamil language learning platform for children, building an engaged community of 5,000+ followers across YouTube and Instagram.</p>
+                        <ul>
+                            <li>Created 100+ educational videos focused on Tamil language learning</li>
+                            <li>Built community of 5,000+ engaged followers through organic growth</li>
+                            <li>Developed content strategy resulting in consistent audience engagement</li>
+                            <li>Designed curriculum bridging cultural gaps for diaspora children</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-tags">
+                        <span class="tag">Content Creation</span>
+                        <span class="tag">Community Building</span>
+                        <span class="tag">EdTech</span>
+                        <span class="tag">Video Production</span>
+                        <span class="tag">Social Media</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Experience Item 3 -->
+            <div class="timeline-item">
+                <div class="timeline-date">2021 - 2022</div>
+                <div class="timeline-content">
+                    <h3>Social Media Manager</h3>
+                    <div class="timeline-company">Early Childhood Education Center</div>
+                    <div class="timeline-description">
+                        <p>Managed social media presence and content strategy for educational institution, increasing engagement and parent community involvement.</p>
+                        <ul>
+                            <li>Developed social media content calendar and posting strategy</li>
+                            <li>Increased follower engagement by 150% through targeted content</li>
+                            <li>Created visual content showcasing educational programs and activities</li>
+                            <li>Managed parent communication and community engagement initiatives</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-tags">
+                        <span class="tag">Social Media Management</span>
+                        <span class="tag">Content Strategy</span>
+                        <span class="tag">Community Engagement</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education Section -->
+            <div class="timeline-item">
+                <div class="timeline-date">2020 - 2022</div>
+                <div class="timeline-content">
+                    <h3>MBA in Business Administration</h3>
+                    <div class="timeline-company">SSN School of Management</div>
+                    <div class="timeline-description">
+                        <p>Specialized in Marketing and Digital Strategy with focus on consumer behavior and data analytics.</p>
+                    </div>
+                    <div class="timeline-tags">
+                        <span class="tag">Marketing Strategy</span>
+                        <span class="tag">Data Analytics</span>
+                        <span class="tag">Business Administration</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Education Section -->
+            <div class="timeline-item">
+                <div class="timeline-date">2016 - 2020</div>
+                <div class="timeline-content">
+                    <h3>B.E. Computer Science</h3>
+                    <div class="timeline-company">Alagappa University</div>
+                    <div class="timeline-description">
+                        <p>Foundation in computer science, programming, and technology that informs my technical approach to digital marketing.</p>
+                    </div>
+                    <div class="timeline-tags">
+                        <span class="tag">Computer Science</span>
+                        <span class="tag">Technical Foundation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Sridevi. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Add scroll effect to nav
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 50) {
+                nav.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.3)';
+            } else {
+                nav.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
